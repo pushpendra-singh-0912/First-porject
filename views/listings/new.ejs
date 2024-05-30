@@ -1,0 +1,53 @@
+<% layout("/layouts/boilerplate")%>
+
+<body>
+    <br> <br>
+    <div class="row">
+       
+
+    <h2>Create a new Listing</h2>
+    <form method="post" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mg-3">
+            <label for="text" class="form-label">Title</label> <br>
+            <input type="text" name="listing[title]" placeholder="title" id="text" class="form-control" required>
+            <div class="valid-feedback">title okay !</div>
+            <div class="invalid-feedback">not okay</div>
+
+        </div>
+        <div class="mg-3">
+            <label for="des" class="form-label">Description</label> <br>
+            <input type="text" name="listing[description]" placeholder="description" id="des" class="form-control"  required>
+                        <div class="valid-feedback">title okay !</div>
+            <div class="invalid-feedback">not okay</div>
+        </div> 
+        <div class="mg-3">
+            <label for="img" class="form-label">Upload Image</label> <br>
+            <input type="file" required name="listing[image]" placeholder="enter URL" id="img" class="form-control">
+        </div>
+        <div  class="row">
+            <div class="mg-3  col-4">
+                <label for="price" class="form-label">Price</label> <br>
+                <input type="text" name="listing[price]" placeholder="price" id="price" class="form-control" required>
+                            <div class="valid-feedback">title okay !</div>
+            <div class="invalid-feedback">not okay</div>
+            </div>
+            <div class="mg-3 col-8">
+                <label for="location" class="form-label">Location</label> <br>
+                <input type="text" name="listing[location]" placeholder="location" id="location" class="form-control" required>
+            <div class="valid-feedback">title okay !</div>
+            <div class="invalid-feedback">not okay</div>
+            </div>
+        </div>
+        <div class="mg-3">
+            <label for="country" class="form-label">Country</label> <br>
+            <input type="text" name="listing[country]" placeholder="country" id="country" class="form-control">
+            <div class="valid-feedback">title okay !</div>
+            <div class="invalid-feedback">not okay</div>
+        </div>
+        <br>
+        <button class="btn btn-dark ad-btn">Add</button> <br> <br>
+    </form>
+   
+
+    </div>
+</body>

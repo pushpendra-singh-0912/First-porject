@@ -1,0 +1,52 @@
+<%layout("/layouts/boilerplate")%>
+<body>
+
+    <h3>Edit listing</h3>
+<form method="post" action="/listings/<%=listing._id%>?_method=put" enctype="multipart/form-data" novalidate class="needs-validation">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" id="title" class="form-control" name="listing[title]" value=<%=listing.title%> required > 
+        <div class="valid-feedback">title okay !</div>
+        <div class="invalid-feedback">not okay</div>
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <input type="text" id="description" class="form-control" name="listing[description]" value=<%=listing.description%> required>
+                <div class="valid-feedback">title okay !</div>
+                <div class="invalid-feedback">not okay</div>
+    </div>
+    <div  >
+        <h4>Original listing</h4>
+        <img class="w-25 p-3" src="<%=listing.image.url%>" alt="">
+
+    </div>
+    <div class="mb-3">
+        <label for="imgae" class="form-label">Image</label>
+    <input type="file" id="image" class="form-control" name="listing[image]">
+            <!-- <div class="valid-feedback">title okay !</div>
+            <div class="invalid-feedback">not okay</div> -->
+    </div>
+    <div class="row">
+        <div class="mb-3 col-4">
+            <label for="price" class="form-label">Price</label>
+            <input type="number" id="price" class="form-control" name="listing[price]" value=<%=listing.price%>>
+                    <div class="valid-feedback">title okay !</div>
+                    <div class="invalid-feedback">not okay</div>
+        </div>
+        <div class="mb-3 col-8">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" id="location" class="form-control" name="listing[location]" value=<%=listing.location%>>
+                    <div class="valid-feedback">title okay !</div>
+                    <div class="invalid-feedback">not okay</div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="country" class="form-label">Country</label>
+    <input type="text" id="country" class="form-control" name="listing[country]" value=<%=listing.country%> required>
+            <div class="valid-feedback">title okay !</div>
+            <div class="invalid-feedback">not okay</div>
+    </div>
+
+    <button  class="btn btn-dark ad-btn">Edit</button>
+</form>
+</body>
